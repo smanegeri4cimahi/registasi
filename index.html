@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Registration| SMAN 4 Cimahi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+        /* Mengatur dasar halaman jadi Putih Bersih */
+        body, html { 
+            margin: 0; 
+            padding: 0; 
+            height: 100%; 
+            width: 100%; 
+            overflow: hidden; 
+            background: #e8f1f7;
+        }
+
+        .wrapper { 
+            position: relative; 
+            width: 100%; 
+            height: 100vh; 
+            overflow: hidden; 
+        }
+
+        iframe {
+            position: absolute;
+            top: -45px; 
+            left: 0; 
+            width: 100%; 
+            height: calc(100% + 45px); 
+            border: none;
+            padding-top: 35px; 
+            padding-bottom: 35px; 
+            box-sizing: border-box;
+            /* Pastikan background iframe juga putih agar serasi */
+            background: #e8f1f7;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <iframe id="myIframe" src="" allowtransparency="true"></iframe>
+    </div>
+
+    <script>
+        const queryString = window.location.search;
+        const baseUrl = "https://script.google.com/macros/s/AKfycbzmzPTrMEUjNKWYDKPpz1Hb3zMetXsNaXZBbj1JRTAfGrdQf6_QITIRNjB-2pvyEbA_/exec";
+        document.getElementById('myIframe').src = baseUrl + queryString;
+    </script>
+</body>
+</html>
